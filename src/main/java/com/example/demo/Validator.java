@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Validator {
@@ -15,6 +14,14 @@ public class Validator {
             }
         }
         return false;
+    }
+    boolean isPrime(String n) {
+        if (n%2==0) return false;
+        for(int i=3;i*i<=n;i+=2) {
+            if(n%i==0)
+                return false;
+        }
+        return true;
     }
 
 }
