@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 public class Rectangle {
     private int height;
     private int width;
@@ -7,6 +9,15 @@ public class Rectangle {
     public boolean isSquare(Rectangle rectangle) {
 
         if (rectangle.getHeight() == rectangle.getWidth()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isEqual(@RequestParam Rectangle rectangle1, @RequestParam Rectangle rectangle2){
+
+        if (rectangle1.getHeight() == rectangle2.getHeight() && rectangle2.getWidth() == rectangle2.getWidth()) {
             return true;
         } else {
             return false;
