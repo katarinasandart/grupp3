@@ -17,11 +17,4 @@ public class Validator {
         }
         return false;
     }
-<<<<<<< HEAD
-    
-=======
-
-
-
->>>>>>> master
 }
