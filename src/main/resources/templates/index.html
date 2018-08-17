@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
 
-<form action="/test" method="get">
+<form action="validator" method="post">
     <input type="text" name="test"/>
     <input type="submit"/>
 </form>
-
+<p th:text="${yes}"></p>
+<p th:text="${no}"></p>
 </body>
 </html>
